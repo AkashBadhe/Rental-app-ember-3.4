@@ -42,6 +42,17 @@ module('Acceptance | list rentals', function(hooks) {
     assert.equal(currentURL(), '/contact', 'should navigate to contact');
   });
 
+  test('should link to agents route', async function(assert) {
+    await visit('/');
+    await click(".menu-agents");
+    assert.equal(currentURL(), "/agents", "should navigate to agents");
+  });
+
+  test('should render agents', async function(assert) {
+    await visit('/agents');
+    assert.equal(this.element.querySelectorAll('.agents').length, 3, 'should display 3 agents');
+  });
+
   test('should list available rentals', async function(assert) {
     await visit('/');
     assert.equal(this.element.querySelectorAll('.results .listing').length, 3, 'should display 3 listings');
