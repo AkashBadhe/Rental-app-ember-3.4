@@ -1,6 +1,6 @@
 # rental-app
 
-[Demo](https://dreamy-pasteur-dc43ce.netlify.app/)
+[Demo](https://rental-app-with-ember-3-4.netlify.app/rentals)
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
